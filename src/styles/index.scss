@@ -1,19 +1,19 @@
 // Colors
-$primary: #461E7D;
-$secondary: #FD6600;
-$complementary: #5738FF;
+$primary: #461e7d;
+$secondary: #fd6600;
+$complementary: #5738ff;
 $black: #000000;
 $white: #ffffff;
+$font: "Avenir-Black", Arial, Helvetica, sans-serif;
 
 @import "./fonts.scss";
 
 // CSS BELOW
 body {
   background-color: $white;
-  font-family: "Avenir-Light", Arial, Helvetica, sans-serif;
+  font-family: $font;
 }
 
 h3 {
-  font-family: "Avenir-Black", Arial, Helvetica, sans-serif;
+  font-family: $font;
 }
-
