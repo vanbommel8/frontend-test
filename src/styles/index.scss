@@ -4,7 +4,16 @@ $secondary: #fd6600;
 $complementary: #5738ff;
 $black: #000000;
 $white: #ffffff;
-$font: "Avenir-Black", Arial, Helvetica, sans-serif;
+$fontBlack: "Avenir-Black", Arial, Helvetica, sans-serif;
+$font: "Avenir-Light", Arial, Helvetica, sans-serif;
+$fontSale: "Avenir-Light", Arial, Helvetica, sans-serif;
+$fontSizeBase: 18px;
+$boilerCardWidth: 291px;
+$boilerCardHeight: 180px;
+$boilerDesc: 19px;
+$boilerDescWidth: 234px;
+$boilerDescLine: 20px;
+$boilerDiscountPriceFont: 24px;
 
 @import "./fonts.scss";
 
@@ -12,8 +21,72 @@ $font: "Avenir-Black", Arial, Helvetica, sans-serif;
 body {
   background-color: $white;
   font-family: $font;
+  padding-top: 200px;
+}
+
+.container {
+  background: grey;
 }
 
 h3 {
   font-family: $font;
+}
+
+.boilerCard {
+  width: $boilerCardWidth;
+  height: $boilerCardHeight;
+  position: absolute;
+  background: red;
+}
+
+.boilerDesc {
+  font-size: $boilerDesc;
+  width: $boilerDescWidth;
+  line-height: $boilerDescLine;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.boilerBrand {
+  font-family: $fontBlack;
+  letter-spacing: 0.6px;
+  color: $black;
+  font-size: $fontSizeBase;
+}
+
+.boilerDiscountPrice {
+  color: $secondary;
+  font-family: $fontBlack;
+  font-size: $boilerDiscountPriceFont;
+}
+
+.boilerData {
+  margin-top: 10px;
+}
+
+.boilerCard img {
+  width: 291px;
+  height: 180px;
+  background: #f7f7f7;
+  position: relative;
+}
+
+.sale {
+  background: $secondary;
+  border-radius: 0px 3px 3px 0px;
+  padding: 5px;
+  text-align: left;
+  font-family: $fontSale;
+  letter-spacing: 0px;
+  color: $white;
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+}
+
+.wishlist {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1;
 }
