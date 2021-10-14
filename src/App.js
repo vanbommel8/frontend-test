@@ -25,7 +25,6 @@ function App() {
     <div className="container">
       <div className="row mb-5 gx-5">
         <Filters />
-
         <div className="col-lg-8 col-md-6">
           <div className="row gx-5">
             <Boilers data={state.boiler.boilers} />
