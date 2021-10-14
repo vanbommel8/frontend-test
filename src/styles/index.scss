@@ -6,11 +6,9 @@ $black: #000000;
 $white: #ffffff;
 $fontBlack: "Avenir-Black", Arial, Helvetica, sans-serif;
 $font: "Avenir-Light", Arial, Helvetica, sans-serif;
-$fontSale: "Avenir-Light", Arial, Helvetica, sans-serif;
+$fontSale: "Avenir-Black", Arial, Helvetica, sans-serif;
 $fontSizeBase: 1.125rem;
-$boilerCardWidth: 18.188rem;
-$boilerCardHeight: 11.25rem;
-$boilerDesc: 1.063rem;
+$boilerDesc: 1rem;
 $boilerDescWidth: 14.625rem;
 $boilerDescLine: 1.25rem;
 $prezzoFont: 1.5rem;
@@ -23,7 +21,7 @@ $confrontaSize: 0.75rem;
 $categorieFontSize: 1rem;
 $categorieH4FontSize: 0.938rem;
 $heightBoxCategorie: 50rem;
-
+$saleFontSize:  0.75rem;
 
 
 
@@ -41,8 +39,6 @@ h3 {
 }
 
 .boilerCard {
-  width: $boilerCardWidth;
-  height: $boilerCardHeight;
   position: relative;
   background: $white;
 }
@@ -132,8 +128,7 @@ h3 {
 }
 
 .boilerCard img {
-  width: 291px;
-  height: 180px;
+  width: 100%;
   background: #f7f7f7;
   position: relative;
 }
@@ -141,6 +136,7 @@ h3 {
 .sale {
   background: $secondary;
   border-radius: 0px 3px 3px 0px;
+  font-size: $saleFontSize;
   padding: 5px;
   text-align: left;
   font-family: $fontSale;
