@@ -1,10 +1,8 @@
 import React from "react";
 
 
-export default function Checkbox() {
-    return (<>
-        <span className='scegliPer'><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input> Disponibili (24)</span>
-    </>
-
+export default function Checkbox({titolo}) {
+    return (
+        <span><input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"></input> {titolo}</span>
     )
 }
