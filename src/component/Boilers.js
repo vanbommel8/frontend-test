@@ -2,10 +2,28 @@ import React from "react";
 import Boiler from './shared/Boiler';
 import img from '../images/boiler.png'
 
-export default function Boilers(){
+export default function Boilers({data}){
 
 
     return(
-        <Boiler immagine={img} brand={'Ariston'} descrizione={'Matis condens - Condensing Boiler 24 kW Methane - Indoor'} prezzo={'1.350,00 €'} prezzoPreSconto = {''} note = {'Sopralluogo e installazione inclusi'} stelle={''}/>
+         
+           data.map(({ id,
+            alimentazione,
+            brand,
+            descrizione,
+            disponibile,
+            immagine,
+            inSconto,
+            note,
+            potenzaNominale,
+            prezzo,
+            prezzoPreSconto,
+            stelle,
+            tipologia,
+            utilizzo}) =>
+            <Boiler immagine={immagine} brand={brand} descrizione={descrizione} prezzo={`${prezzo} euro ` } prezzoPreSconto = {prezzoPreSconto} note = {note} stelle={stelle}/>
+           ) 
+        
+        
     )
 }

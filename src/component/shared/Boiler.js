@@ -30,20 +30,16 @@ export default function Boiler({
             <div className="boilerData">
               <span className="boilerBrand">{brand}</span>
               <br />
-              <div className="boilerDesc">
-                {descrizione}
-              </div>
+              <div className="boilerDesc">{descrizione}</div>
               <span className="prezzo">{prezzo}</span>{" "}
               <span className="prezzoPreSconto">{prezzoPreSconto}</span>
               <br />
-              <span className="note">
-                {note}
-              </span>
+              <span className="note">{note}</span>
               <br />
               <hr />
               <Rating />
               <span className="confronta">
-                <Checkbox titolo={"Confronta"}/>
+                <Checkbox titolo={"Confronta"} />
               </span>
             </div>
           </div>
