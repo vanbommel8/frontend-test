@@ -26,7 +26,7 @@ function App() {
     <div className="container">
       <div className="row mb-5 gx-5">
         <Filters />
-        <Boilers />
+        <Boilers  />
       </div>
     </div>
   );
