@@ -18,9 +18,8 @@ $prezzoPreScontoColor: #b2b2b2;
 $prezzoPreScontoSize: 18px;
 $starsSize: 13px;
 $noteSize: 13px;
-$confrontaColor: #0000004D;
+$confrontaColor: #0000004d;
 $confrontaSize: 12px;
-
 
 @import "./fonts.scss";
 
@@ -30,7 +29,6 @@ body {
   font-family: $font;
   padding-top: 200px;
 }
-
 
 h3 {
   font-family: $font;
@@ -49,53 +47,17 @@ h3 {
   font-family: $fontBlack;
 }
 
-.form-check-input label:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.form-check-input .cr {
-  position: relative;
-  display: inline-block;
-  border: 1px solid #a9a9a9;
-  border-radius: .25em;
-  width: 1.3em;
-  height: 1.3em;
-  float: left;
-  margin-right: .5em;
-}
-
-.form-check-input .cr .cr-icon {
-  position: absolute;
-  font-size: .8em;
-  line-height: 0;
-  top: 50%;
-  left: 15%;
-}
-
-.form-check-input label input[type="checkbox"] {
-  display: none;
-}
-
-.form-check-input label input[type="checkbox"]+.cr>.cr-icon {
-  opacity: 0;
-}
-
-.form-check-input label input[type="checkbox"]:checked+.cr>.cr-icon {
-  opacity: 1;
-}
-
-.form-check-input label input[type="checkbox"]:disabled+.cr {
-  opacity: .5;
-}
-
 .confronta {
   color: $confrontaColor;
   font-family: $fontBlack;
   font-size: $confrontaSize;
   text-transform: uppercase;
   float: right;
+}
+
+.box {
+  background-color: $secondary;
+  height: 100%;
 }
 
 .stars {
