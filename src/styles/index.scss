@@ -21,9 +21,7 @@ $confrontaSize: 0.75rem;
 $categorieFontSize: 1rem;
 $categorieH4FontSize: 0.938rem;
 $heightBoxCategorie: 50rem;
-$saleFontSize:  0.75rem;
-
-
+$saleFontSize: 0.75rem;
 
 @import "./fonts.scss";
 
@@ -41,6 +39,7 @@ h3 {
 .boilerCard {
   position: relative;
   background: $white;
+  margin-bottom: 3rem;
 }
 
 .note {
@@ -54,34 +53,37 @@ h3 {
   font-family: $fontBlack;
   font-size: $confrontaSize;
   text-transform: uppercase;
-  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .categorie {
-  border-bottom: 1px solid #0000001A;
+  border-bottom: 1px solid #0000001a;
   margin-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .categorie ul li {
   list-style-type: none;
 }
 
-.categorie h3{
- font-family: $fontBlack;
- font-size: $categorieFontSize;
- text-transform: uppercase;
- margin-bottom: 1rem;
-}
-
-.filtriCategorie h3{
+.categorie h3 {
   font-family: $fontBlack;
   font-size: $categorieFontSize;
   text-transform: uppercase;
   margin-bottom: 1rem;
- }
+}
+
+.filtriCategorie h3 {
+  font-family: $fontBlack;
+  font-size: $categorieFontSize;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
 
 .boxCategorie {
-  border-right: 1px solid #0000001A;
+  border-right: 1px solid #0000001a;
   min-height: $heightBoxCategorie;
 }
 
