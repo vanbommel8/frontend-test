@@ -1,5 +1,5 @@
 import React from "react";
-import boilerImg from '../images/boiler.png';
+import boilerImg from '../../images/boiler.png';
 
 
 export default function Boiler() {
