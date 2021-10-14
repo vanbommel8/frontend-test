@@ -1,6 +1,6 @@
 import React from "react";
-import Boiler from "./component/boiler"
-import Filters from "./component/filters";
+import Boiler from "./component/Boiler"
+import Filters from "./component/Filters";
 
 
 

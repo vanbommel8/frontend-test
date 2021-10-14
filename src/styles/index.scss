@@ -7,19 +7,25 @@ $white: #ffffff;
 $fontBlack: "Avenir-Black", Arial, Helvetica, sans-serif;
 $font: "Avenir-Light", Arial, Helvetica, sans-serif;
 $fontSale: "Avenir-Light", Arial, Helvetica, sans-serif;
-$fontSizeBase: 18px;
-$boilerCardWidth: 291px;
-$boilerCardHeight: 180px;
-$boilerDesc: 17px;
-$boilerDescWidth: 234px;
-$boilerDescLine: 20px;
-$prezzoFont: 24px;
+$fontSizeBase: 1.125rem;
+$boilerCardWidth: 18.188rem;
+$boilerCardHeight: 11.25rem;
+$boilerDesc: 1.063rem;
+$boilerDescWidth: 14.625rem;
+$boilerDescLine: 1.25rem;
+$prezzoFont: 1.5rem;
 $prezzoPreScontoColor: #b2b2b2;
-$prezzoPreScontoSize: 18px;
-$starsSize: 13px;
-$noteSize: 13px;
+$prezzoPreScontoSize: 1.125rem;
+$starsSize: 0.813rem;
+$noteSize: 0.813rem;
 $confrontaColor: #0000004d;
-$confrontaSize: 12px;
+$confrontaSize: 0.75rem;
+$categorieFontSize: 1rem;
+$categorieH4FontSize: 0.938rem;
+$heightBoxCategorie: 50rem;
+
+
+
 
 @import "./fonts.scss";
 
@@ -55,13 +61,42 @@ h3 {
   float: right;
 }
 
-.box {
-  background-color: $secondary;
-  height: 100%;
+.categorie {
+  border-bottom: 1px solid #0000001A;
+  margin-bottom: 2rem;
+}
+
+.categorie ul li {
+  list-style-type: none;
+}
+
+.categorie h3{
+ font-family: $fontBlack;
+ font-size: $categorieFontSize;
+ text-transform: uppercase;
+ margin-bottom: 1rem;
+}
+
+.filtriCategorie h3{
+  font-family: $fontBlack;
+  font-size: $categorieFontSize;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+ }
+
+.boxCategorie {
+  border-right: 1px solid #0000001A;
+  min-height: $heightBoxCategorie;
+}
+
+.categorie h4 {
+  color: $complementary;
+  font-size: $categorieH4FontSize;
 }
 
 .stars {
   font-size: $starsSize;
+  color: $primary;
 }
 
 .boilerDesc {
