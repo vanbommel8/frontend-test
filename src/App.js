@@ -23,7 +23,7 @@ function App() {
     fetchData();
   }, []);
 
-  console.log(state);
+console.log(state.matchBoiler.arrayProdotti);
   return (
 
     <>
@@ -38,7 +38,7 @@ function App() {
             </div>
           </div>
         </div>
-        <ConfrontaAlert showBar={state.matchBoiler.showbar } />
+        <ConfrontaAlert showBar={state.matchBoiler.arrayProdotti}/>
       </AppContext.Provider>
     </>
   );
