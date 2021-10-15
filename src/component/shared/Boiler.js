@@ -21,7 +21,11 @@ export default function Boiler({
   stelle,
   tipologia,
   utilizzo,
+  dispatch
 }) {
+
+
+
   return (
 
     <div className="col-lg-4 col-md-6">
@@ -50,7 +54,7 @@ export default function Boiler({
           }
 
           <span className="confronta">
-            <Checkbox titolo={"Confronta"} />
+            <Checkbox dispatch={dispatch} titolo={"Confronta"} id={id} />
           </span>
         </div>
       </div>

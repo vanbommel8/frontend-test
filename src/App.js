@@ -23,8 +23,9 @@ function App() {
     fetchData();
   }, []);
 
-  //console.log(state);
+  console.log(state);
   return (
+
     <>
       <AppContext.Provider value={[state, dispatch]}>
         <div className="container">
