@@ -2,6 +2,7 @@ import React from "react";
 import Checkbox from "./Checkbox";
 import Rating from "./Rating";
 import WishList from "./WishList";
+import img from '../../images/boiler.png'
 
 const starsNumbers = [1, 2, 3, 4, 5];
 
@@ -29,7 +30,7 @@ export default function Boiler({
       }
 
         <WishList />
-        <img src={immagine} alt="Boiler" />
+        <img src={img} alt="Boiler" />
         <div className="boilerData">
           <span className="boilerBrand">{brand}</span>
           <br />

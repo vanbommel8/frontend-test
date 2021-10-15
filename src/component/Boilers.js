@@ -1,6 +1,5 @@
 import React, {useContext } from "react";
 import Boiler from './shared/Boiler';
-import img from '../images/boiler.png'
 import { AppContext } from "../App";
 
 export default function Boilers({ data }) {
