@@ -25,7 +25,6 @@ export default function Boiler({
 
     <div className="col-lg-4 col-md-6">
       <div className="boilerCard">{
-
         (inSconto) && <span className="sale">Risparmi il 20%</span>
       }
 

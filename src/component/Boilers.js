@@ -7,7 +7,6 @@ export default function Boilers({ data }) {
     console.log(data);
 
     return (
-
         data.map(({ id,
             alimentazione,
             brand,
@@ -24,7 +23,5 @@ export default function Boilers({ data }) {
             utilizzo }) =>
             <Boiler key={id} inSconto={inSconto} immagine={img} brand={brand} descrizione={descrizione} prezzo={`${prezzo} €`} prezzoPreSconto={`${prezzoPreSconto}€ `} note={note} stelle={stelle} />
         )
-
-
     )
 }

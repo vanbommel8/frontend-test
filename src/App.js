@@ -5,6 +5,9 @@ import { useReducer, useEffect } from "react";
 import reducer from "./store/actions";
 import { INITIAL_STATE } from "./store/reducer";
 import axios from "axios";
+import ConfrontaAlert from "./component/shared/ControntaAlert";
+
+
 function App() {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
@@ -21,7 +24,7 @@ function App() {
   }, []);
 
   console.log(state);
-  return (
+  return (<>
     <div className="container">
       <div className="row mb-5 gx-5">
         <Filters />
@@ -32,6 +35,8 @@ function App() {
         </div>
       </div>
     </div>
+    <ConfrontaAlert />
+    </>
   );
 }
 
