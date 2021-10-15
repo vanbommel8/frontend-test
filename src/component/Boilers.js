@@ -22,7 +22,7 @@ export default function Boilers({ data }) {
             stelle,
             tipologia,
             utilizzo }) =>
-            <Boiler key={id} immagine={img} brand={brand} descrizione={descrizione} prezzo={`${prezzo} €`} prezzoPreSconto={prezzoPreSconto} note={note} stelle={stelle} />
+            <Boiler key={id} inSconto={inSconto} immagine={img} brand={brand} descrizione={descrizione} prezzo={`${prezzo} €`} prezzoPreSconto={`${prezzoPreSconto}€ `} note={note} stelle={stelle} />
         )
 
 

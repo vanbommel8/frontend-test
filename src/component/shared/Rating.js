@@ -1,11 +1,14 @@
 import React from "react";
 
 
-export default function Rating() {
+export default function Rating({isRating}) {
     return (
-        <span className="stars">
-            <i className="fas fa-star"></i>
-            <i className="far fa-star"></i>
+        <span className="stars">{
+
+            (isRating)?  <i className="fas fa-star"></i>:   <i className="far fa-star"></i>
+        }
+         
+          
         </span>
     )
 }

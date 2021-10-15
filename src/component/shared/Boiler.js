@@ -22,8 +22,11 @@ export default function Boiler({
   return (
 
     <div className="col-lg-4 col-md-6">
-      <div className="boilerCard">
-        <span className="sale">Risparmi il 20%</span>
+      <div className="boilerCard">{
+
+          (inSconto) && <span className="sale">Risparmi il 20%</span>
+      }
+       
         <WishList />
         <img src={immagine} alt="Boiler" />
         <div className="boilerData">
@@ -35,8 +38,14 @@ export default function Boiler({
           <br />
           <span className="note">{note}</span>
           <br />
-          <hr />
-          <Rating />
+          <hr /> {
+
+           [1,2,3,4,5].map( (value) =>{
+            return (value<=stelle)? < Rating isRating={true}/> :<Rating isRating={false}/>
+            
+           })
+          }
+
           <span className="confronta">
             <Checkbox titolo={"Confronta"} />
           </span>
