@@ -1,13 +1,13 @@
 import React from "react";
 import Filters from "./component/Filters";
 import Boilers from "./component/Boilers";
-import { useReducer, useEffect } from "react";
+import { useReducer, useEffect, createContext } from "react";
 import reducer from "./store/actions";
 import { INITIAL_STATE } from "./store/reducer";
 import axios from "axios";
 import ConfrontaAlert from "./component/shared/ControntaAlert";
 
-
+export const AppContext = createContext();
 function App() {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
@@ -23,19 +23,22 @@ function App() {
     fetchData();
   }, []);
 
-  console.log(state);
-  return (<>
-    <div className="container">
-      <div className="row mb-5 gx-5">
-        <Filters />
-        <div className="col-lg-8 col-md-6">
-          <div className="row gx-5">
-            <Boilers data={state.boiler.boilers} />
+  //console.log(state);
+  return (
+    <>
+      <AppContext.Provider value={[state, dispatch]}>
+        <div className="container">
+          <div className="row mb-5 gx-5">
+            <Filters />
+            <div className="col-lg-8 col-md-6">
+              <div className="row gx-5">
+                <Boilers data={state.boiler.boilers} />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <ConfrontaAlert />
+        <ConfrontaAlert showBar={state.matchBoiler.showbar } />
+      </AppContext.Provider>
     </>
   );
 }

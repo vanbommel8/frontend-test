@@ -1,27 +1,18 @@
-import React from "react";
+import React, {useContext } from "react";
 import Boiler from './shared/Boiler';
 import img from '../images/boiler.png'
-
+import { AppContext } from "../App";
 
 export default function Boilers({ data }) {
     console.log(data);
 
+    const [state, dispatch] = useContext(AppContext);
+
+    console.log(state.boiler.boilers);
+
     return (
-        data.map(({ id,
-            alimentazione,
-            brand,
-            descrizione,
-            disponibile,
-            immagine,
-            inSconto,
-            note,
-            potenzaNominale,
-            prezzo,
-            prezzoPreSconto,
-            stelle,
-            tipologia,
-            utilizzo }) =>
-            <Boiler key={id} inSconto={inSconto} immagine={img} brand={brand} descrizione={descrizione} prezzo={`${prezzo} €`} prezzoPreSconto={`${prezzoPreSconto}€ `} note={note} stelle={stelle} />
+        state.boiler.boilers.map((boiler) =>
+            <Boiler key={boiler.id} {...boiler} />
         )
     )
 }

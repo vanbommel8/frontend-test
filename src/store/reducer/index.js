@@ -7,4 +7,5 @@ export const INITIAL_STATE = {
     brands: "",
     quantity: 0,
   },
+  matchBoiler:{showbar:false}
 };
