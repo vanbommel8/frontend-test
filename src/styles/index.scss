@@ -22,6 +22,8 @@ $categorieFontSize: 1rem;
 $categorieH4FontSize: 0.938rem;
 $heightBoxCategorie: 50rem;
 $saleFontSize: 0.75rem;
+$cuoreVuoto: #00000033;
+$cuorePieno: red;
 
 @import "./fonts.scss";
 
@@ -215,4 +217,14 @@ input[type="checkbox"] {
 input:focus {
   background-color: $white;
   border: none;
+}
+
+// cuore vuoto
+.far.fa-heart {
+  color: $cuoreVuoto;
+}
+
+// cuore pieno
+.fas.fa-heart {
+  color: $cuorePieno;
 }
