@@ -23,7 +23,7 @@ function App() {
     fetchData();
   }, []);
 
-console.log(state.matchBoiler.arrayProdotti);
+console.log(state);
   return (
 
     <>
