@@ -33,7 +33,7 @@ export default function Boiler({
         (inSconto) && <span className="sale">Risparmi il 20%</span>
       }
 
-        <WishList />
+        <WishList dispatch={dispatch} />
         <img src={img} alt="Boiler" />
         <div className="boilerData">
           <span className="boilerBrand">{brand}</span>
