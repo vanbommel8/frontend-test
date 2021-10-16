@@ -5,7 +5,7 @@ import { useReducer, useEffect, createContext } from "react";
 import reducer from "./store/actions";
 import { INITIAL_STATE } from "./store/reducer";
 import axios from "axios";
-import ConfrontaAlert from "./component/shared/ControntaAlert";
+import ConfrontaAlert from "./component/shared/ConfrontaAlert";
 
 export const AppContext = createContext();
 function App() {

@@ -48,13 +48,13 @@ export default function Boiler({
 
             // Facciamo un map del valore dell'array dichiarato "starsNumbers", successivamente si confronta il numero con la prop "stelle" che sarebbe il numero di recensioni che ha avuto (al momento prende il numero dal db.json) e se corrisponde a quel numero stampa la stellina piena altrimenti la stellina vuota.
             starsNumbers.map((value) => {
-              return (value <= stelle) ? < Rating isRating={true} /> : <Rating isRating={false} />
+              return (value <= stelle) ? <Rating isRating={true} /> : <Rating isRating={false} />
 
             })
           }
 
           <span className="confronta">
-            <Checkbox dispatch={dispatch} titolo={"Confronta"} id={id} />
+            <Checkbox dispatch={dispatch} type={'MATCH_BOILER'} titolo={"Confronta"} id={id} />
           </span>
         </div>
       </div>
