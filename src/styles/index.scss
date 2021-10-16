@@ -89,7 +89,7 @@ button:disabled {
 
 .boxCategorie {
   border-right: 1px solid #0000001a;
-  min-height: $heightBoxCategorie;
+  min-height: 100%;
 }
 
 .categorie h4 {
@@ -191,22 +191,18 @@ button:disabled {
 }
 
 input[type="checkbox"]:checked {
-  transform: scale(1.3);
   -webkit-appearance: none;
   background-color: $complementary;
   width: 20px;
   height: 20px;
-  vertical-align: text-top;
   cursor: pointer;
 }
 
 input[type="checkbox"] {
-  transform: scale(1);
   -webkit-appearance: none;
   background-color: $white;
   width: 20px;
   height: 20px;
-  vertical-align: text-top;
   cursor: pointer;
 }
 
@@ -214,4 +210,9 @@ input[type="checkbox"] {
   border-radius: 0;
   border-color: #0000001A;
   vertical-align: bottom;
+}
+
+input:focus {
+  background-color: $white;
+  border: none;
 }

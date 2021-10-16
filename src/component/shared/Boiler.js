@@ -54,7 +54,7 @@ export default function Boiler({
           }
 
           <span className="confronta">
-            <Checkbox dispatch={dispatch} type={'MATCH_BOILER'} titolo={"Confronta"} id={id} />
+            Confronta <Checkbox dispatch={dispatch} type={'MATCH_BOILER'} id={id} />
           </span>
         </div>
       </div>
