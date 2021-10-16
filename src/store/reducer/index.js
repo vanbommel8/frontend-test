@@ -1,9 +1,9 @@
 export const INITIAL_STATE = {
   boiler: {
     boilers: [],
-    isWishList: false,
+   
   },
-
+    isWishList: false,
     matchBoiler: {arrayProdotti:[]}
 };
 
