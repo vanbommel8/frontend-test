@@ -39,9 +39,11 @@ export default function Boiler({
           <div className="boilerBrand">{brand}</div>
           <div className="boilerDesc">{descrizione}</div>
           <span className="prezzo">{`${prezzo} €`}</span>{" "}
-          <span className="prezzoPreSconto">{
-            (prezzoPreSconto) && `${prezzoPreSconto} €`
-          }</span>
+          <span className="prezzoPreSconto">
+            {
+              (prezzoPreSconto) && `${prezzoPreSconto} €`
+            }
+          </span>
           <br />
           <div className="note">{note}</div>
           <hr /> {
