@@ -6,6 +6,8 @@ import reducer from "./store/actions";
 import { INITIAL_STATE } from "./store/reducer";
 import axios from "axios";
 import ConfrontaAlert from "./component/shared/ConfrontaAlert";
+import Ordina from "./component/shared/Ordina.js";
+import Pagination from "./component/shared/Pagination";
 
 export const AppContext = createContext();
 function App() {
@@ -23,22 +25,25 @@ function App() {
     fetchData();
   }, []);
 
-console.log(state);
+  console.log(state);
   return (
 
     <>
       <AppContext.Provider value={[state, dispatch]}>
         <div className="container">
+          <Ordina />
           <div className="row mb-5 gx-5">
             <Filters />
             <div className="col-lg-8 col-md-6">
               <div className="row gx-5">
                 <Boilers data={state.boiler.boilers} />
               </div>
+              <hr />
+              <Pagination />
             </div>
           </div>
         </div>
-        <ConfrontaAlert showBar={state.matchBoiler.arrayProdotti}/>
+        <ConfrontaAlert showBar={state.matchBoiler.arrayProdotti} />
       </AppContext.Provider>
     </>
   );

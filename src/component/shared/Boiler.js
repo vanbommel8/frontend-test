@@ -29,21 +29,21 @@ export default function Boiler({
   return (
 
     <div className="col-lg-4 col-md-6">
-      <div className="boilerCard">{
-        (inSconto) && <span className="sale">Risparmi il 20%</span>
-      }
-
+      <div className="boilerCard">
+        {
+          (inSconto) && <span className="sale">Risparmi il 20%</span>
+        }
         <WishList dispatch={dispatch} />
         <img src={img} alt="Boiler" />
         <div className="boilerData">
-          <span className="boilerBrand">{brand}</span>
-          <br />
+          <div className="boilerBrand">{brand}</div>
           <div className="boilerDesc">{descrizione}</div>
           <span className="prezzo">{`${prezzo} €`}</span>{" "}
-          <span className="prezzoPreSconto">{`${prezzoPreSconto} €`}</span>
+          <span className="prezzoPreSconto">{
+            (prezzoPreSconto) && `${prezzoPreSconto} €`
+          }</span>
           <br />
-          <span className="note">{note}</span>
-          <br />
+          <div className="note">{note}</div>
           <hr /> {
 
             // Facciamo un map del valore dell'array dichiarato "starsNumbers", successivamente si confronta il numero con la prop "stelle" che sarebbe il numero di recensioni che ha avuto (al momento prende il numero dal db.json) e se corrisponde a quel numero stampa la stellina piena altrimenti la stellina vuota.

@@ -132,6 +132,45 @@ button:disabled {
   font-size: $prezzoFont;
 }
 
+.fa-chevron-left::before {
+  font-size: 13px;
+  margin-right: 5px;
+}
+
+.fa-chevron-right::before {
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+.singleNumber.current {
+  background: $complementary;
+  border-radius: 50%;
+  color: #fff;
+  padding: 10px 15px 10px 15px;
+}
+
+.prev {
+  color: gray;
+}
+
+.singleNumber {
+  padding: 10px 15px 10px 15px;
+}
+
+.ordina {
+  color: $complementary;
+}
+
+.next {
+  color: $complementary;
+}
+
+
+.fa-chevron-down::before {
+  font-size: 13px;
+  margin-left: 5px;
+}
+
 .boilerData {
   margin-top: 10px;
 }
@@ -177,7 +216,6 @@ button:disabled {
 .testoConfronta {
   color: $white;
   font-size: 1.25rem;
-  line-height: 4.063rem;
 }
 
 .buttonConfronta {
