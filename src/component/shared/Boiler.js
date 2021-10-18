@@ -33,7 +33,9 @@ export default function Boiler({
         {
           (inSconto) && <span className="sale">Risparmi il 20%</span>
         }
-        <WishList dispatch={dispatch} />
+        {/* <WishList dispatch={dispatch} /> */}
+        <span className="wishlist"><i onClick={(event) => event.target.classList.toggle("fas")}
+        class="far fa-heart"></i></span>
         <img src={img} alt="Boiler" />
         <div className="boilerData">
           <div className="boilerBrand">{brand}</div>
