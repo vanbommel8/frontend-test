@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../../App";
+export default function WishList({ id }) {
+    const [state, dispatch] = useContext(AppContext);
+    console.log(state['isWishList']);
 
-export default function WishList({ isWishList, id, dispatch }) {
+
+
     return (
-        <div className="wishlist" onClick={() => dispatch({ type: 'IS_WISHLIST' })}><i className="far fa-heart"></i> <i className="fas fa-heart"></i>
-        </div>
+        <span onClick={() => dispatch({ type: 'IS_WISHLIST', payload: id })} className="wishlist">{
+            (state['isWishList']) ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>
+        }
+        </span>
     )
+
 }

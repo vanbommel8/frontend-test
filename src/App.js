@@ -36,7 +36,7 @@ function App() {
             <Filters />
             <div className="col-lg-8 col-md-6">
               <div className="row gx-5">
-                <Boilers data={state.boiler.boilers} />
+                <Boilers data={state.boiler} />
               </div>
               <hr />
               <Pagination />

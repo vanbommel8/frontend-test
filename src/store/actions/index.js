@@ -1,7 +1,7 @@
 export default function reducer(state, action) {
   switch (action.type) {
     case "FETCH_DATA":
-      return { ...state, boiler: { ...state.boiler, boilers: action.payload } };
+      return { ...state, boilers: action.payload };
 
     case "MATCH_BOILER":
       if (state.matchBoiler.arrayProdotti.includes(action.payload)) {
