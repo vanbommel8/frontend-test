@@ -1,7 +1,7 @@
 import React from "react";
 import Checkbox from "./Checkbox";
 import Rating from "./Rating";
-
+// import WishList from "./WishList";
 import img from '../../images/boiler.png'
 
 const starsNumbers = [1, 2, 3, 4, 5];
@@ -33,7 +33,7 @@ export default function Boiler({
         {
           (inSconto) && <span className="sale">Risparmi il 20%</span>
         }
-
+        {/* <WishList dispatch={dispatch} /> */}
         <span className="wishlist"><i onClick={(event) => event.target.classList.toggle("fas")}
         class="far fa-heart"></i></span>
         <img src={img} alt="Boiler" />

@@ -21,7 +21,7 @@ export default function ConfrontaAlert({ showBar }) {
     };
     return (
         (showBar.length >= 1) &&
-        <div className='confrontaAlert d-flex justify-content-between'>
+        <div className={`d-flex justify-content-between ${showBar.length >= 1 && "moved confrontaAlert"}`}>
             <div className='testoConfronta align-self-center'> {title()} </div>
             <button disabled={(showBar.length < 3) || (showBar.length >= 4) ? true : false} className='buttonConfronta'>CONFRONTA</button>
         </div>

@@ -225,7 +225,7 @@ button:disabled {
 }
 
 .confrontaAlertAnimation {
-  transition: all 0.6s ease;
+  transition: all 5s ease;
 }
 
 .testoConfronta {
@@ -312,4 +312,18 @@ input:focus {
   70% {
     transform: scale(1);
   }
+}
+
+@keyframes animazione {
+  from {
+    bottom: -65px;
+  }
+  to {
+    bottom: 0;
+  }
+}
+.moved {
+  animation-name: animazione;
+  animation-duration: .9s;
+  animation-fill-mode: forwards;
 }
