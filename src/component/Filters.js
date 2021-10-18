@@ -19,9 +19,19 @@ export default function Filters() {
         fetchData();
     }, []);
 
-    // const stock = Object.entries(category);
-  
-    console.log("Stock:", category);
+    const stock =  Object.entries(category).map(([ category,obj])=>{
+
+         const value=Object.entries(obj).map(([key,value])=>{
+
+
+             console.log(value)
+         });
+         ;
+     });
+
+
+
+  console.log(category)
 
     return (
         <div className='col-lg-4 col-md-6'>
