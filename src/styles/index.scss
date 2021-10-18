@@ -118,6 +118,7 @@ button:disabled {
   color: $prezzoPreScontoColor;
   font-family: $fontBlack;
   font-size: $prezzoPreScontoSize;
+
 }
 
 .prezzo {
@@ -134,10 +135,14 @@ button:disabled {
 
 .prezzoSconto {
   color: $secondary;
+  font-family: $fontBlack;
+  font-size: $prezzoFont;
 }
 
 .noteSconto {
   color: $secondary;
+  font-family: $fontBlack;
+  font-size: $noteSize;
 }
 
 .fa-chevron-left::before {
