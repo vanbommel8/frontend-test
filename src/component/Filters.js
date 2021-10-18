@@ -19,19 +19,14 @@ export default function Filters() {
         fetchData();
     }, []);
 
-    const stock =  Object.entries(category).map(([ category,obj])=>{
+    const stock = Object.entries(category).map(([category, obj]) => {
 
-         const value=Object.entries(obj).map(([key,value])=>{
+        const value = Object.entries(obj).map(([key, value]) => {
 
+        });
+        ;
+    });
 
-             console.log(value)
-         });
-         ;
-     });
-
-
-
-  console.log(category)
 
     return (
         <div className='col-lg-4 col-md-6'>
@@ -46,8 +41,24 @@ export default function Filters() {
                     </ul>
                 </div>
                 <div className='filtriCategorie'>
-                    <h3>Scegli per</h3>
-                    <Checkbox />
+
+
+                    {Object.entries(category).map(([category, obj]) => {
+
+                        const value = Object.entries(obj).map(([key, category]) => {
+                            console.log("Key", key);
+                            console.log("Category", category);
+
+
+
+                        });
+                        console.log("Value:", value);
+                        return (<>
+                            <h3>{}</h3>
+                            <Checkbox /><h3>{}</h3>
+                        </>
+                        )
+                    })}
                 </div>
             </div>
         </div>
