@@ -19,13 +19,6 @@ export default function Filters() {
         fetchData();
     }, []);
 
-    const stock = Object.entries(category).map(([category, obj]) => {
-
-        const value = Object.entries(obj).map(([key, value]) => {
-
-        });
-        ;
-    });
 
 
     return (
@@ -43,22 +36,35 @@ export default function Filters() {
                 <div className='filtriCategorie'>
 
 
-                    {Object.entries(category).map(([category, obj]) => {
+                    {
+                        Object.entries(category).map(([category, obj]) => {
+                        const  values=Object.entries(obj);
+                          console.log(values[0][0])
+                             const text= values[0][0].replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2").toUpperCase()
 
-                        const value = Object.entries(obj).map(([key, category]) => {
-                            console.log("Key", key);
-                            console.log("Category", category);
+
+                            return  <h3> {text}
+                                {
+                                     values.map(([key,value])=>{
+
+
+                                    return (<div>
+
+                                        <Checkbox  />
+                                    </div> )
+                                })
 
 
 
-                        });
-                        console.log("Value:", value);
-                        return (<>
-                            <h3>{}</h3>
-                            <Checkbox /><h3>{}</h3>
-                        </>
-                        )
-                    })}
+                                }
+
+
+                          </h3>
+
+                    })
+
+
+                    }
                 </div>
             </div>
         </div>

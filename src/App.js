@@ -25,7 +25,7 @@ function App() {
     fetchData();
   }, []);
 
-  console.log(state);
+
   return (
 
     <>
