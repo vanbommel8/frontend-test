@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Checkbox from "./shared/Checkbox";
-
+import axios from "axios";
 
 export default function Filters() {
+
+    const [category, setCategory] = useState({});
+
+    useEffect(() => {
+        async function fetchData() {
+
+            const url = "http://localhost:9000/stock"
+            const response = await axios.get(
+                url
+            );
+            setCategory(response.data);
+        }
+
+        fetchData();
+    }, []);
+
+    // const stock = Object.entries(category);
+  
+    console.log("Stock:", category);
+
     return (
         <div className='col-lg-4 col-md-6'>
             <div className='boxCategorie'>
@@ -17,7 +37,7 @@ export default function Filters() {
                 </div>
                 <div className='filtriCategorie'>
                     <h3>Scegli per</h3>
-                <Checkbox /> 
+                    <Checkbox />
                 </div>
             </div>
         </div>

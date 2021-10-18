@@ -118,7 +118,6 @@ button:disabled {
   color: $prezzoPreScontoColor;
   font-family: $fontBlack;
   font-size: $prezzoPreScontoSize;
-
 }
 
 .prezzo {
@@ -293,7 +292,7 @@ input:focus {
     transform: scale(1);
   }
   5% {
-    transform: scale(1.50);
+    transform: scale(1.5);
   }
   20% {
     transform: scale(1);
@@ -302,13 +301,13 @@ input:focus {
     transform: scale(1);
   }
   35% {
-    transform: scale(1.50);
+    transform: scale(1.5);
   }
   50% {
     transform: scale(1);
   }
   55% {
-    transform: scale(1.50);
+    transform: scale(1.5);
   }
   70% {
     transform: scale(1);
