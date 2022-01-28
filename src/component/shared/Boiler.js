@@ -35,8 +35,8 @@ export default function Boiler({
         }
         {/* <WishList dispatch={dispatch} /> */}
         <span className="wishlist"><i onClick={(event) => event.target.classList.toggle("fas")}
-        class="far fa-heart"></i></span>
-        <img src={img} alt="Boiler" />
+        className="far fa-heart"></i></span>
+        <img  src={img} alt="Boiler" />
         <div className="boilerData">
           <div className="boilerBrand">{brand}</div>
           <div className="boilerDesc">{descrizione}</div>

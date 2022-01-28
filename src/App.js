@@ -19,7 +19,7 @@ function App() {
 
       const response = await axios.get(url);
       if (response.status === 200) {
-        dispatch({ type: "FETCH_DATA", payload: response.data });
+           dispatch({ type: "FETCH_DATA", payload: response.data });
       }
     }
     fetchData();

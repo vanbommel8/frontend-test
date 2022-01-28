@@ -7,6 +7,7 @@ export default function Boilers() {
 
     const [state, dispatch] = useContext(AppContext);
     return (state.boilers.map(
-        (boiler) => <Boiler dispatch={dispatch} key={boiler.id} {...boiler} />
+        (boiler) =>
+            <Boiler dispatch={dispatch} key={boiler.id} {...boiler} />
     ))
 }
