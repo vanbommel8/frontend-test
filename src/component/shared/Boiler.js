@@ -4,7 +4,7 @@ import Rating from "./Rating";
 import WishList from "./WishList";
 import img from '../../images/boiler.png'
 
-const starsNumbers = [1, 2, 3, 4, 5];
+const starsNumbers=[1,2,3,4,5]
 
 export default function Boiler({
   id,
@@ -51,7 +51,7 @@ export default function Boiler({
           <hr /> {
 
             // Facciamo un map del valore dell'array dichiarato "starsNumbers", successivamente si confronta il numero con la prop "stelle" che sarebbe il numero di recensioni che ha avuto (al momento prende il numero dal db.json) e se corrisponde a quel numero stampa la stellina piena altrimenti la stellina vuota.
-            starsNumbers.map((value) => {
+           starsNumbers.map((value) => {
               return (value <= stelle) ? <Rating  isRating={true} /> : <Rating isRating={false} />
 
             })
