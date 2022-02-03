@@ -2,7 +2,6 @@ export default function reducer(state, action) {
   switch (action.type) {
     case "FETCH_DATA":
       return { ...state, boilers: action.payload };
-
     case "MATCH_BOILER":
       if (state.matchBoiler.arrayProdotti.includes(action.payload)) {
         console.log("presente");
@@ -29,6 +28,11 @@ export default function reducer(state, action) {
 
     case "IS_WISHLIST":
       return { ...state, isWishList: !state.isWishList }
+
+
+    case 'ADD_FILTERS':
+
+      return { ...state,  filters: action.payload };
 
     default:
       return state;

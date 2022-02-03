@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AppContext } from "../../App";
 export default function WishList({ id }) {
     const [state, dispatch] = useContext(AppContext);
-    console.log(state['isWishList']);
+
 
 
 

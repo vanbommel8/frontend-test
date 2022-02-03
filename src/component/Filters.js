@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from "react";
-import Checkbox from "./shared/Checkbox";
-import axios from "axios";
+import React from "react";
 
-export default function Filters() {
 
-    const [category, setCategory] = useState({});
+/*import Filter from "./shared/Filter"*/
+/*import Rating from "./shared/Rating";*/
+//import {editLabel} from "../Utility/StringUtillity";
+//const starsNumbers=[1,2,3,4,5,6,7]
+import Filter from "./shared/Filter";
 
-    useEffect(() => {
-        async function fetchData() {
+export default function Filters({filters}) {
 
-            const url = "http://localhost:9000/stock"
-            const response = await axios.get(
-                url
-            );
-            setCategory(response.data);
+
+    //console.log(filters);
+
+
+       /* const obj=filters?.map((filter, index) => (
+
+        Object.entries(filter).map(([title,obj])=>{
+
+            return [title,obj]
         }
-
-        fetchData();
-    }, []);
+        )
+    ))*/
 
 
 
@@ -34,39 +37,21 @@ export default function Filters() {
                     </ul>
                 </div>
                 <div className='filtriCategorie'>
-
-
                     {
-                        Object.entries(category).map(([category, obj]) => {
-                        const  values=Object.entries(obj);
-                          console.log(values[0][0])
-                             const text= values[0][0].replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2").toUpperCase()
 
+                        filters?.map((filter,index)=>(
 
-                            return  <h3> {text}
-                                {
-                                     values.map(([key,value])=>{
-
-
-                                    return (<div>
-
-                                        <Checkbox  />
-                                    </div> )
-                                })
-
-
-
-                                }
-
-
-                          </h3>
-
-                    })
-
+                            <Filter key={index} filter={filter}  />
+                        ))
 
                     }
+
+
                 </div>
             </div>
         </div>
     );
+
 }
+
+

@@ -26,6 +26,27 @@ function App() {
   }, []);
 
 
+
+
+  useEffect(() => {
+    async function fetchFilters() {
+      await axios.get("http://localhost:9000/stock").then((response) => {
+        response.status === 200 &&
+        dispatch({
+          type: 'ADD_FILTERS',
+          payload: response.data,
+        });
+
+
+
+
+      });
+
+
+    }
+    fetchFilters();
+  }, []);
+
   return (
 
     <>
@@ -33,7 +54,7 @@ function App() {
         <div className="container">
           <Ordina />
           <div className="row mb-5 gx-5">
-            <Filters />
+            <Filters filters={state.filters}/>
             <div className="col-lg-8 col-md-6">
               <div className="row gx-5">
                 <Boilers data={state.boiler} />

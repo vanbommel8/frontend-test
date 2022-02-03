@@ -1,7 +1,7 @@
 import React from "react";
 import Checkbox from "./Checkbox";
 import Rating from "./Rating";
-import WishList from "./WishList";
+//import WishList from "./WishList";
 import img from '../../images/boiler.png'
 
 const starsNumbers=[1,2,3,4,5]
@@ -51,14 +51,14 @@ export default function Boiler({
           <hr /> {
 
             // Facciamo un map del valore dell'array dichiarato "starsNumbers", successivamente si confronta il numero con la prop "stelle" che sarebbe il numero di recensioni che ha avuto (al momento prende il numero dal db.json) e se corrisponde a quel numero stampa la stellina piena altrimenti la stellina vuota.
-           starsNumbers.map((value) => {
-              return (value <= stelle) ? <Rating  isRating={true} /> : <Rating isRating={false} />
+             starsNumbers.map((value,index) => {
+              return   <Rating key={index}    isRating={(value <= stelle)? true:false} />
 
             })
           }
 
           <span className="confronta">
-            Confronta <Checkbox dispatch={dispatch} type={'MATCH_BOILER'} id={id} />
+            Confronta <Checkbox isEvent={true} dispatch={dispatch} type={'MATCH_BOILER'} id={id} />
           </span>
         </div>
       </div>
